@@ -7,7 +7,6 @@
 
 [ "$1" = "-h" ] || [ "$1" = "--help" ] || [ $# != 0 ] && { echo "Usage : $0"; exit 1; }
 
-#!/bin/bash
 x=1
 while [ $x -le 5 ]
 do
