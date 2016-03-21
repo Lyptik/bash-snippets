@@ -16,7 +16,8 @@ sleep 2
 mdadm -A -R /dev/md9 /dev/sdq3
 mkdir -p /volume1/from_USB
 mount /dev/md9 /volume1/from_USB
-echo "Done. Don't forget to unmount the partition : umount /volume1/from_USB or via the graphical interface"
+echo "Done. After copying, put the correct permissions. cd yourdir && chown -R david:users ./"
+echo "Don't forget to unmount the partition : umount /volume1/from_USB or via the graphical interface"
 
 # LVM VOLUMES (Default on synology)
 
@@ -26,7 +27,7 @@ cat /proc/mdstat
 sleep 2
 echo "Check lvm volumes before plugging the disk"
 lvm vgscan
-echo "Plug the disk
+echo "Plug the disk"
 sleep 5
 mdadm -A -R /dev/md9 /dev/sdq5
 echo "Check lvm volumes"
@@ -35,7 +36,5 @@ sleep 2
 vgchange -a y vg1000
 mkdir -p /mnt/usb
 mount /dev/vg1000/lv /mnt/usb
-
-==
-
-lvm vgscan
+echo "Done. After copying, put the correct permissions. cd yourdir && chown -R david:users ./"
+echo "Don't forget to unmount the partition : umount /volume1/from_USB or via the graphical interface"
