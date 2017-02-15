@@ -16,6 +16,6 @@ cd $ORIG_PATH
 # $1 archiveName.zip
 # $2 folderName containing the files to encode
 # $3 max size of one part (default in MB) or use k for KB, g for GB, and t for TB
-# Unzip with theUnarcher for example
+# Unzip with theUnarchiver for example
 
 zip -r -s $1 $2 $3
