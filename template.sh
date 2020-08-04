@@ -5,6 +5,7 @@
 # Errors out
 set -e
 
+# Dash version : usage () {
 function usage {
   echo "Usage : $0 [ --help ]"
 }
